@@ -1,0 +1,120 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:layout_marginBottom="56dp"> <!-- leave space for BottomNavigationView -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- App Title -->
+            <TextView
+                android:id="@+id/appTitle"
+                android:text="W-Safe: Emergency SMS"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- Contact Dropdown -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:elevation="8dp"
+                app:cardCornerRadius="12dp"
+                android:padding="4dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/contactDropdown"
+                    android:hint="Select Saved Contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawablePadding="8dp"
+                    android:popupBackground="@android:color/white"
+                    android:dropDownVerticalOffset="8dp"
+                    android:dropDownWidth="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Message Box -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                android:padding="4dp">
+
+                <EditText
+                    android:id="@+id/messageText"
+                    android:hint="Type or speak your message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine"
+                    android:minHeight="120dp"
+                    android:maxHeight="300dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Send Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sendButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Send"
+                app:backgroundTint="#E53935"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Mic Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/micToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:backgroundTint="#018786"
+        app:tint="@android:color/white"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="100dp"/>  <!-- Increased bottom margin -->
+
+
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        android:background="?android:attr/windowBackground"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

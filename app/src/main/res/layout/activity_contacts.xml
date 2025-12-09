@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Emergency Contacts"
+            android:textColor="#222222"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/contactName"
+            android:hint="Contact Name"
+            android:background="@drawable/input_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/contactNumber"
+            android:hint="Contact Number"
+            android:background="@drawable/input_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/saveContactBtn"
+            android:text="Save Contact"
+            android:backgroundTint="#1976D2"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/viewContactsBtn"
+            android:text="View Saved Contacts"
+            android:backgroundTint="#EEEEEE"
+            android:textColor="#222222"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/clearContactsBtn"
+            android:text="Clear All Contacts"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/savedContactsText"
+            android:text="Saved contacts will appear here"
+            android:textColor="#555555"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:text="Back"
+            android:backgroundTint="#EEEEEE"
+            android:textColor="#222222"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>
