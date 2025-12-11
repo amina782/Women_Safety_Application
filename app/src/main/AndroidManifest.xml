@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.sendmsgapp">
-
     <!-- Permissions -->
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -13,6 +12,9 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,31 +23,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Sendmsgapp">
-
-        <!-- ✅ Splash Screen as launcher -->
+        android:theme="@style/Theme.Sendmsgapp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" /> <!-- ✅ Splash Screen as launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- AI Chat Screen -->
+        </activity> <!-- AI Chat Screen -->
         <activity
             android:name=".AiChatActivity"
-            android:exported="false" />
-
-        <!-- Main screen (after splash) -->
+            android:exported="false" /> <!-- Main screen (after splash) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true" /> <!-- Contacts Manager -->
+        <activity android:name=".ContactsActivity" />
 
-        <!-- Contacts Manager -->
-        <activity
-            android:name=".ContactsActivity" />
+
     </application>
+
 </manifest>

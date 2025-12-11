@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Women Safety APP</string>
+    <string name="profile_avatar_desc">Profile avatar</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="drawer_open">Open navigation</string>
+    <string name="drawer_close">Close navigation</string>
 </resources>
